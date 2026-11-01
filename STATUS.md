@@ -4,7 +4,7 @@
 
 A beginner manual on low-energy productivity for ADHD brains, published by
 Asdale Dynamics, LLC (Indiana, formed October 2026). Plain English, warm,
-shame-free, local-first, no tracking, no secrets.
+shame-free, tested, local-first — no account, no app, no tracking.
 
 - `docs/` — beginner manual in markdown:
   - `README.md` — manual overview and contents
@@ -20,7 +20,7 @@ shame-free, local-first, no tracking, no secrets.
   - `assets/css/style.css` — calm warm styles with print-friendly overrides
   - `assets/js/main.js` — mobile menu and print hint
 - `worksheets/` — printable worksheets (HTML, formatted for print via
-  File → Print):
+  File → Print), each with a non-printing "Return to the site" link:
   - `tiny-task-planner.html`
   - `body-doubling-session-log.html`
   - `energy-map.html`
@@ -28,13 +28,14 @@ shame-free, local-first, no tracking, no secrets.
 - `LICENSE` — MIT License, copyright line exactly
   `Copyright (c) 2026 Asdale Dynamics, LLC`
 - `README.md` — project overview crediting Asdale Dynamics, LLC and Dylan
-  Asdale
-- `verify.py` — link/HTML/license verification script
+  Asdale; includes what's inside, how to use, how to test, and LLC context
+- `package.json` — npm test/lint/verify scripts
+- `verify.py` — link/HTML/license/secret verification script
 - `STATUS.md` — this file
 
-Git: initialized, one commit (`5904b1e`), plain message, no co-author
-trailers, existing git identity used (Dylan Asdale). Nothing pushed, no
-remote created, nothing published.
+Git: initialized, commits on `master`, plain messages, no co-author
+trailers, existing git identity used. Nothing pushed, no remote created,
+nothing published.
 
 ## How to run it
 
@@ -43,18 +44,21 @@ remote created, nothing published.
 - Print worksheets: open any file in `worksheets/`, then File → Print
   (Ctrl+P / Cmd+P). Black and white recommended.
 - No build step, no server, no install. Open files directly from this folder.
+- Run checks: `npm test` (runs `verify.py`) and `npm run lint`
+  (runs htmlhint).
 
 ## Verification results
 
-- `python3 verify.py`: 9 HTML files checked, 0 errors, 0 warnings.
+- `python3 verify.py` / `npm test`: 9 HTML files checked, 0 errors, 0 warnings.
   - All internal links resolve to existing files
   - No external URLs (local-first)
   - `LICENSE` contains the exact copyright line
   - `README.md` credits Asdale Dynamics, LLC
   - Docs links to worksheets all resolve
   - Secret/key pattern scan: clean
-- `npx htmlhint site/**/*.html worksheets/**/*.html`: 9 files scanned, no
-  errors.
+- `npx htmlhint site/**/*.html worksheets/**/*.html` / `npm run lint`: 9
+  files scanned, no errors.
+- `npm test` exits 0.
 
 ## Known gaps
 

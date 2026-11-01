@@ -3,9 +3,9 @@
 A beginner manual for getting things done when your energy is low, your
 executive function is tired, and "just try harder" has never worked.
 
-Topics include tiny tasks, body-doubling, and energy-friendly routines, plus
-printable worksheets you can fill out by hand. Written in plain English,
-warm, shame-free, and tested.
+Covers tiny tasks, body-doubling, and energy-friendly routines, plus
+printable worksheets you can fill out by hand. Plain English, warm,
+shame-free, tested, and local-first — no account, no app, no tracking.
 
 ## Who this is for
 
@@ -21,10 +21,13 @@ productivity advice that assumes unlimited willpower.
 
 ## What's inside
 
-- `docs/` — the beginner manual in plain markdown
-- `site/` — a static HTML version you can open in any browser
-- `worksheets/` — printable worksheets to fill out on paper
-- `STATUS.md` — what was built, how to run it, and verification results
+| Folder | Contents |
+|--------|----------|
+| `docs/` | Beginner manual in plain markdown: introduction, tiny tasks, body-doubling, energy-friendly routines, printable worksheets index |
+| `site/` | Static HTML version of the manual — open any file in a browser |
+| `worksheets/` | Printable worksheets: tiny task planner, body-doubling session log, energy map, gentle daily routine |
+| `STATUS.md` | What was built, how to run it, verification results, known gaps |
+| `LICENSE` | MIT License |
 
 ## Main ideas
 
@@ -37,6 +40,24 @@ your brain stay on track. You do not have to do the same task, or even talk.
 **Energy-friendly routines.** Match tasks to the energy you actually have
 today, not the energy you wish you had. Rest is part of the plan, not a
 failure.
+
+## How to use it
+
+1. Read the manual in `docs/`, or open `site/index.html` in your browser for
+   the web version.
+2. Print any worksheet from `worksheets/` (File → Print, or Ctrl+P / Cmd+P)
+   and fill it out by hand. Black and white saves ink.
+3. There is no wrong way to fill these out. Blank is fine. Half-finished is
+   fine.
+
+## Test it
+
+This project includes a verification script and HTML lint:
+
+```bash
+python3 verify.py        # link checks, license check, secret scan
+npx htmlhint "site/**/*.html" "worksheets/**/*.html"  # markup lint
+```
 
 ## Credit
 
@@ -53,8 +74,11 @@ step, never condescending.
 
 MIT License. Copyright (c) 2026 Asdale Dynamics, LLC. See `LICENSE`.
 
-## How to use
+## About Asdale Dynamics, LLC
 
-Read the manual in `docs/`, or open `site/index.html` in your browser for the
-web version. Print any worksheet from `worksheets/` and fill it out by hand.
-No account, no app, no tracking. Local-first and private by design.
+Asdale Dynamics publishes beginner-friendly AI education, books, and guides,
+plus practical tools and small-business helpers: AI tools and agents/MCP,
+local AI, free AI coding, GitHub, automation, privacy, KDP/book publishing,
+marketing, reselling, bookkeeping, accessible life-admin helpers, healthcare
+worker AI aids (education only, never medical advice), and fun extras like
+FFXIV and chess tools.

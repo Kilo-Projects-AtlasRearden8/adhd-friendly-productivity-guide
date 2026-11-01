@@ -1,0 +1,26 @@
+{
+  "name": "adhd-friendly-productivity-guide",
+  "version": "1.0.0",
+  "description": "Beginner manual on low-energy productivity for ADHD brains: tiny tasks, body-doubling, energy-friendly routines, and printable worksheets. By Asdale Dynamics, LLC.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "scripts": {
+    "test": "python3 verify.py",
+    "lint": "npx htmlhint \"site/**/*.html\" \"worksheets/**/*.html\"",
+    "verify": "python3 verify.py"
+  },
+  "keywords": [
+    "adhd",
+    "productivity",
+    "beginner",
+    "worksheets",
+    "body-doubling",
+    "tiny-tasks",
+    "energy-friendly",
+    "Asdale Dynamics"
+  ],
+  "author": "Asdale Dynamics, LLC"
+}
